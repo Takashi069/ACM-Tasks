@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+}
+body{
+    
+    background-color: #d8dede;
+    background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);    
+    font-size: 1.2rem; 
+}
+
+h1{
+    font-weight: bold;
+    padding: 2%;
+}
+
+h2{
+    font-weight: light;
+    text-align: center;
+    padding: 1.5%;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+.albumCover{
+    border-radius: 50%;
+}
+
+.audioPlayer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#ifsmall{
+    visibility: hidden;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat Alternates;
+}
+
+#musicInfo{
+    text-align: left;
+    margin: 2%;
+    font-size: 1.3rem;
+}
+
+#player{
+    margin:5%;
+}
+
+#thanks{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@media (max-width: 700px) {
+    * {
+        margin: 0px;
+    }
+    body {
+        background-color: #d8dede;
+        background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);    
+        font-size: 1.2rem; 
+    }
+    #ifsmall{
+        visibility: visible;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+    #main{
+        visibility: hidden;
+    }
+
+}
+
