@@ -7,17 +7,17 @@ function secretPassword(message){
     var size = message.length;
 	let flag = 0;
 	if(size!=9){
+		flag = 1;
+	}else{
+	    	for (let index = 0; index < 9; index++){
+            	const element = message[index];
+		let temp = message.charCodeAt(index);
+            	if(temp<97 || temp >122){
 			flag = 1;
-		}else{
-			for (let index = 0; index < 9; index++) {
-            const element = message[index];
-						let temp = message.charCodeAt(index);
-            if(temp<97 || temp >122){
-							flag = 1;
-							break;
-						}
-        }
+			break;
 		}
+        	}
+	}
     if(flag==1){
         console.log("BANG! BANG! BANG!");
     }else{
